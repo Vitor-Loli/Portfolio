@@ -153,6 +153,7 @@
 .sobre .biografia{
     display: flex;
     justify-content: space-around;
+    text-align: justify;
 }
 
 .sobre .biografia .texto{
@@ -218,6 +219,7 @@
     align-items: start;
     flex-direction: column;
     gap: 1rem;
+    text-align: justify;
 }
 
 .linguagens .infos h3{
