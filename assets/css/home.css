@@ -208,6 +208,7 @@
 
 .projetos .cards .card{
     width: 20%;
+    height: 700px;
     padding: 1rem;
     height: auto;
     text-align: center;
@@ -253,4 +254,8 @@
 .contatos .redes-sociais i{
     font-size: 200%;
     font-weight: 400;
+}
+
+.contatos .redes-sociais a:hover{
+    color: #027017;
 }

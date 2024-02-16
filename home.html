@@ -38,7 +38,7 @@
                 <p>E você pode me conhecer um pouquinho mais rolando essa página para baixo <i
                         class='bx bx-chevron-down'></i></p>
                 <p>Ou baixando meu Currículo.</p>
-                <button><i class='bx bxs-download'></i></button>
+                <button id="downloadBtn"><i class='bx bxs-download'></i></button>
             </div>
 
             <div class="imagem">
@@ -126,8 +126,8 @@
             <div class="cards">
                 <div class="card">
                     <img src="assets/images/ogbarbearia.png" alt="">
-                    <h3><span class="green">OG Barbearia</span></h3>
-                    <p>Sistema de agenda de horários para uma barbearia</p>
+                    <h3><span class="green">Barber Mark</span></h3>
+                    <p>Sistema de agenda de horários.</p>
                 </div>
 
                 <div class="card">
@@ -137,9 +137,9 @@
                 </div>
 
                 <div class="card">
-                    <img src="assets/images/ogbarbearia.png" alt="">
-                    <h3>OG Barbearia</h3>
-                    <p>Sistema de agenda de horários para uma barbearia</p>
+                    <img src="assets/images/homefinder.png" alt="">
+                    <h3>Home Finder</h3>
+                    <p>Sistema de mostra e busca de imóveis. </p>
                 </div>
             </div>
         </div>
@@ -153,11 +153,9 @@
 
             <div class="container">
                 <div class="redes-sociais">
-                <i class='bx bxl-instagram'></i>
-                <i class='bx bxl-whatsapp' ></i>
-                <i class='bx bxl-linkedin' ></i>
-                <i class='bx bxl-github' ></i>
-                <i class='bx bxl-telegram' ></i>
+                <a href="https://www.instagram.com/vloli.dev/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/vitor-gabirel-181582297/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/Vitor-Loli" target="_blank"><i class='bx bxl-github' ></i></a>
                 </div>
 
                 <div class="madeby">
@@ -205,6 +203,21 @@
         document.getElementById("titulo").innerHTML = titulo
         document.getElementById("explicacao").innerHTML = texto
     }
+
+
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+        var pdfUrl = 'Currículo.pdf';
+        var pdfName = 'curriculo-Vitor-Loli.pdf';
+        var link = document.createElement('a');
+        
+        link.href = pdfUrl;
+        link.download = pdfName;
+    
+        document.body.appendChild(link);
+        link.click();
+
+        document.body.removeChild(link);
+});
 </script>
 
 </html>
