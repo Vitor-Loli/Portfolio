@@ -27,19 +27,55 @@
     margin-left: 3rem;
 }
 
+.cabecalho .menu{
+    position: absolute;
+    right: 5rem;
+}
+
 .cabecalho .menu ul{
     display: flex;
     flex-direction: row;
     gap: 2rem;
 }
 
-.cabecalho div:last-child{
-    position: absolute;
-    right: 5rem;
-}
-
 .cabecalho .menu ul li a:hover{
     border-bottom: 5px solid #027017;
+}
+
+.cabecalho .hamburguer{
+    display: none;
+}
+
+.cabecalho .menu-mobile{
+    width: 0px;
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    background-color: #000000bb;
+    z-index: 9999999;
+}
+
+.cabecalho .menu-mobile ul{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.cabecalho .menu-mobile ul li a{
+    font-size: 20px;   
+}
+
+.cabecalho .menu-mobile ul li:hover{
+    border-bottom: 3px solid #027017;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
 }
 
 .inicio{
@@ -90,7 +126,9 @@
 
 .sobre{
     width: 100%;
-    height: 100vh;
+    height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,7 +163,9 @@
 
 .linguagens{
     width: 100%;
-    height: 100vh;
+    height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,7 +231,9 @@
 
 .projetos{
     width: 100%;
-    height: 100vh;
+    height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,4 +300,174 @@
 
 .contatos .redes-sociais a:hover{
     color: #027017;
+}
+
+.contatos .madeby{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+    .inicio .infos h1{
+        font-size: 150%;
+    }
+    
+    .inicio .infos p{
+        font-size: 80%;
+    }
+
+    .inicio .imagem img{
+        width: 250px;
+        
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .inicio .infos h1{
+        font-size: 110%;
+    }
+    
+    .inicio .infos p{
+        font-size: 60%;
+    }
+
+    .inicio .imagem img{
+        width: 200px;
+        
+    }
+    
+    .projetos .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .projetos .cards .card{
+        width: 50%;
+        height: 500px;
+        padding: 1rem;
+        height: auto;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .card img{
+        width: 60%;
+    }
+
+    .cabecalho .hamburguer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 5rem;
+    }
+
+    .cabecalho .hamburguer i{
+        font-size: 250%;
+        font-weight: 400;
+    }
+
+    .cabecalho .hamburguer:hover{
+        color: #b7410e;
+    }
+
+    .cabecalho .menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .cabecalho .hamburguer{
+        right: 2rem;
+    }
+
+    .inicio{
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .inicio .imagem img{
+        width: 300px;
+        
+    }
+
+    .inicio .infos button{
+        width: 100%;
+    }
+
+    .sobre .biografia{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .sobre .biografia .texto{
+        width: 80%;
+        font-size: 90%;
+        font-weight: 400;
+    }
+
+    .titulo{
+        font-size: 120%;
+    }
+    
+    .titulo i{
+        font-size: 200%;
+    }
+
+    
+    .linguagens .infos h3{
+        font-size: 150%;
+    }
+
+    .linguagens p{
+        font-size: 90%;
+    }
+    
+    .contatos .redes-sociais i{
+        font-size: 200%;
+        font-weight: 400;
+    }
+
+    .contatos .madeby{
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .inicio .infos h1{
+        font-size: 90%;
+    }
+    
+    .inicio .infos p{
+        font-size: 50%;
+    }
+
+    .inicio .imagem img{
+        width: 200px;
+        
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .inicio .infos h1{
+        font-size: 70%;
+    }
+
+    .inicio .infos p{
+        font-size: 45%;
+    }
+
+    .contatos .madeby{
+        font-size: 40%;
+    }
+
 }
